@@ -39,7 +39,7 @@ CCRepeatForever* Bird::flying(){
 }
 
 void Bird::tap(){
-
+    status = isTap;
 }
 
 void Bird::hit(){

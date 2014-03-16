@@ -18,4 +18,12 @@
 
 #define kFlyingDura 0.13
 
+//---bird---
+
+#define kJumpHeight 60
+#define kJumpDura 0.4
+
+
+#define kLandHeight 127
+
 #endif

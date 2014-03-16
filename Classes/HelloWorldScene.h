@@ -26,6 +26,11 @@ private:
     
     cocos2d::CCSize s;
     
+    
+    virtual void onEnter();
+    virtual void onExit();
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
+    
     void addBackground();
     void addLand();
     void addBird();

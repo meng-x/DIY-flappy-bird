@@ -2,6 +2,7 @@
 #include "config.h"
 #include "SimpleAudioEngine.h"
 #include "MoveLoop.h"
+#include "Flying.h"
 
 USING_NS_CC;
 
@@ -121,18 +122,32 @@ void HelloWorld::addBird(){
     bird = new Bird();
     bird->setZOrder(1000); //to the very front
     bird->CCNode::setPosition(s.width/2, s.height/2);
+    
+    // add Flying Component!!  finally!
+    bird->addComponent(new Flying());
+    
     this->addChild(bird);
 }
 
 
 
+/////------------------- event handlers ----------
 
+void HelloWorld::onEnter(){
+    CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
+    CCLayer::onEnter();
+}
 
+void HelloWorld::onExit(){
+    CCDirector::sharedDirector()->getTouchDispatcher()->removeDelegate(this);
+    CCLayer::onExit();
+}
 
-
-
-
-
+bool HelloWorld::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent){
+    bird->tap();
+    
+    return true;
+}
 
 
 
