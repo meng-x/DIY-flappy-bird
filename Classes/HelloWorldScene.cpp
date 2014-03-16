@@ -3,6 +3,8 @@
 #include "SimpleAudioEngine.h"
 #include "MoveLoop.h"
 #include "Flying.h"
+#include "MoveLeft.h"
+#include "AddPipe.h"
 
 USING_NS_CC;
 
@@ -95,6 +97,9 @@ bool HelloWorld::init()
     addBackground();
     addLand();
     addBird();
+    addLayerMoveLeft();
+    
+    this->addComponent(new AddPipe());
     
     return true;
 }
@@ -129,6 +134,40 @@ void HelloWorld::addBird(){
     this->addChild(bird);
 }
 
+void HelloWorld::addLayerMoveLeft(){
+    layerMoveLeft = CCParallaxNode::create();
+    layerMoveLeft->addComponent(new MoveLeft(land->boundingBox().size.width));
+    this->addChild(layerMoveLeft);
+}
+
+void HelloWorld::addPipe(){
+    int r = rand();
+    r = r%5;
+    float dy = r * 10;
+    
+    r = rand();
+    r = r%2;
+    if (r == 0) {
+        dy = -dy;
+    }
+    
+    
+    CCSprite* pipe1 = CCSprite::createWithSpriteFrameName("pipe1.png");
+    CCPoint pos = ccp(s.width + pipe1->boundingBox().size.width/2,
+                      s.height/2 + pipe1->boundingBox().size.height/2 + kHoleBetweenPipe/2 + kLandHeight/2 + dy);
+    pipe1->setPosition(layerMoveLeft->convertToNodeSpace(pos));
+    
+    CCSprite* pipe2 = CCSprite::createWithSpriteFrameName("pipe2.png");
+    pos.y = s.height/2 - pipe2->boundingBox().size.height/2 - kHoleBetweenPipe + kLandHeight/2 + dy;
+    pipe2->setPosition(layerMoveLeft->convertToNodeSpace(pos));
+    
+    // set priority
+    pipe1->setZOrder(land->getZOrder()-1);
+    pipe2->setZOrder(land->getZOrder()-1);
+    
+    layerMoveLeft->CCNode::addChild(pipe1);
+    layerMoveLeft->CCNode::addChild(pipe2);
+}
 
 
 /////------------------- event handlers ----------

@@ -20,10 +20,15 @@
 
 //---bird---
 
-#define kJumpHeight 60
-#define kJumpDura 0.4
+#define kJumpHeight 40
+#define kJumpDura 0.3
 
 
 #define kLandHeight 127
+
+//---pipe---
+
+#define kHoleBetweenPipe 60
+#define kTimeToAddPipe 1.5
 
 #endif

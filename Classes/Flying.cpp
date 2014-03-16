@@ -38,6 +38,14 @@ void Flying::actionTap(){
     
     float duraDown = getDuraDown(uppos, downpos); //time of falling down
     
+    ///
+    ///
+    //CCSize win = CCDirector::sharedDirector()->getWinSize();
+    //TODO
+    ///
+    ///
+
+    
     //-- face up jump --
     
     CCMoveTo* moveUp = CCMoveTo::create(kJumpDura, uppos);

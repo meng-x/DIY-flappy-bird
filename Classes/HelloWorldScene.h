@@ -20,9 +20,12 @@ public:
     // implement the "static node()" method manually
     CREATE_FUNC(HelloWorld);
     
+    void addPipe();
+    
 private:
     cocos2d::CCSprite* land;
     Bird* bird;
+    CCParallaxNode* layerMoveLeft;
     
     cocos2d::CCSize s;
     
@@ -34,6 +37,7 @@ private:
     void addBackground();
     void addLand();
     void addBird();
+    void addLayerMoveLeft();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

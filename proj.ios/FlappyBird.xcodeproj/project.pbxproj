@@ -248,6 +248,8 @@
 		64DF740F18D588CB00A0184F /* MoveLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DF740D18D588CB00A0184F /* MoveLoop.cpp */; };
 		64DF741318D5930200A0184F /* Bird.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DF741118D5930200A0184F /* Bird.cpp */; };
 		64EE360918D59E81000CD5D3 /* Flying.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64EE360718D59E81000CD5D3 /* Flying.cpp */; };
+		64EE360C18D5AF13000CD5D3 /* MoveLeft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64EE360A18D5AF13000CD5D3 /* MoveLeft.cpp */; };
+		64EE360F18D5B7D6000CD5D3 /* AddPipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64EE360D18D5B7D6000CD5D3 /* AddPipe.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -778,6 +780,10 @@
 		64DF741218D5930200A0184F /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bird.h; path = ../Classes/Bird.h; sourceTree = "<group>"; };
 		64EE360718D59E81000CD5D3 /* Flying.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Flying.cpp; path = ../Classes/Flying.cpp; sourceTree = "<group>"; };
 		64EE360818D59E81000CD5D3 /* Flying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flying.h; path = ../Classes/Flying.h; sourceTree = "<group>"; };
+		64EE360A18D5AF13000CD5D3 /* MoveLeft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoveLeft.cpp; path = ../Classes/MoveLeft.cpp; sourceTree = "<group>"; };
+		64EE360B18D5AF13000CD5D3 /* MoveLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoveLeft.h; path = ../Classes/MoveLeft.h; sourceTree = "<group>"; };
+		64EE360D18D5B7D6000CD5D3 /* AddPipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AddPipe.cpp; path = ../Classes/AddPipe.cpp; sourceTree = "<group>"; };
+		64EE360E18D5B7D6000CD5D3 /* AddPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddPipe.h; path = ../Classes/AddPipe.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -1925,6 +1931,10 @@
 				64DF740E18D588CB00A0184F /* MoveLoop.h */,
 				64EE360718D59E81000CD5D3 /* Flying.cpp */,
 				64EE360818D59E81000CD5D3 /* Flying.h */,
+				64EE360A18D5AF13000CD5D3 /* MoveLeft.cpp */,
+				64EE360B18D5AF13000CD5D3 /* MoveLeft.h */,
+				64EE360D18D5B7D6000CD5D3 /* AddPipe.cpp */,
+				64EE360E18D5B7D6000CD5D3 /* AddPipe.h */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -2079,6 +2089,7 @@
 				15A3D9101682F7D5002FB0C5 /* b2Timer.cpp in Sources */,
 				15A3D9111682F7D5002FB0C5 /* b2Body.cpp in Sources */,
 				15A3D9121682F7D5002FB0C5 /* b2ContactManager.cpp in Sources */,
+				64EE360F18D5B7D6000CD5D3 /* AddPipe.cpp in Sources */,
 				15A3D9131682F7D5002FB0C5 /* b2Fixture.cpp in Sources */,
 				15A3D9141682F7D5002FB0C5 /* b2Island.cpp in Sources */,
 				15A3D9151682F7D5002FB0C5 /* b2World.cpp in Sources */,
@@ -2180,6 +2191,7 @@
 				15A3DA511682F826002FB0C5 /* CCControlSwitch.cpp in Sources */,
 				298B29C718D0668400C1920F /* WidgetReader.cpp in Sources */,
 				15A3DA521682F826002FB0C5 /* CCControlUtils.cpp in Sources */,
+				64EE360C18D5AF13000CD5D3 /* MoveLeft.cpp in Sources */,
 				375BD4C41868411B0024609E /* TriggerBase.cpp in Sources */,
 				298B29BB18D0668400C1920F /* CheckBoxReader.cpp in Sources */,
 				15A3DA531682F826002FB0C5 /* CCInvocation.cpp in Sources */,
