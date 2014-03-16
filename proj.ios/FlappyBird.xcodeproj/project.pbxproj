@@ -240,6 +240,11 @@
 		379BB9D317F03F3700829B88 /* GUIReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99117F03F3700829B88 /* GUIReader.cpp */; };
 		379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99317F03F3700829B88 /* SceneReader.cpp */; };
 		46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */; };
+		64DF740518D5834E00A0184F /* flappy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64DF740018D5834E00A0184F /* flappy.plist */; };
+		64DF740618D5834E00A0184F /* flappy.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DF740118D5834E00A0184F /* flappy.png */; };
+		64DF740718D5834E00A0184F /* sfx_hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DF740218D5834E00A0184F /* sfx_hit.mp3 */; };
+		64DF740818D5834E00A0184F /* sfx_point.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DF740318D5834E00A0184F /* sfx_point.mp3 */; };
+		64DF740918D5834E00A0184F /* sfx_wing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DF740418D5834E00A0184F /* sfx_wing.mp3 */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -758,6 +763,12 @@
 		379BB99417F03F3700829B88 /* SceneReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneReader.h; sourceTree = "<group>"; };
 		46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UITouchGroup.cpp; sourceTree = "<group>"; };
 		46513EB0187BFBA200B5ABE1 /* UITouchGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchGroup.h; sourceTree = "<group>"; };
+		64DF740018D5834E00A0184F /* flappy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flappy.plist; sourceTree = "<group>"; };
+		64DF740118D5834E00A0184F /* flappy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flappy.png; sourceTree = "<group>"; };
+		64DF740218D5834E00A0184F /* sfx_hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_hit.mp3; sourceTree = "<group>"; };
+		64DF740318D5834E00A0184F /* sfx_point.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_point.mp3; sourceTree = "<group>"; };
+		64DF740418D5834E00A0184F /* sfx_wing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_wing.mp3; sourceTree = "<group>"; };
+		64DF740B18D5853F00A0184F /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../Classes/config.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -1291,6 +1302,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				64DF740A18D5850100A0184F /* Utils */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
@@ -1887,9 +1899,22 @@
 			path = CocoStudio;
 			sourceTree = "<group>";
 		};
+		64DF740A18D5850100A0184F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				64DF740B18D5853F00A0184F /* config.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				64DF740018D5834E00A0184F /* flappy.plist */,
+				64DF740118D5834E00A0184F /* flappy.png */,
+				64DF740218D5834E00A0184F /* sfx_hit.mp3 */,
+				64DF740318D5834E00A0184F /* sfx_point.mp3 */,
+				64DF740418D5834E00A0184F /* sfx_wing.mp3 */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -1980,11 +2005,16 @@
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
+				64DF740518D5834E00A0184F /* flappy.plist in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
+				64DF740718D5834E00A0184F /* sfx_hit.mp3 in Resources */,
+				64DF740818D5834E00A0184F /* sfx_point.mp3 in Resources */,
+				64DF740618D5834E00A0184F /* flappy.png in Resources */,
+				64DF740918D5834E00A0184F /* sfx_wing.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

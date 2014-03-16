@@ -13,10 +13,15 @@ public:
     static cocos2d::CCScene* scene();
     
     // a selector callback
-    void menuCloseCallback(CCObject* pSender);
+    //void menuCloseCallback(CCObject* pSender);
+    
     
     // implement the "static node()" method manually
     CREATE_FUNC(HelloWorld);
+    
+private:
+    cocos2d::CCSize s;
+    void addBackground();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

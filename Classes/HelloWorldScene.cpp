@@ -1,4 +1,6 @@
 #include "HelloWorldScene.h"
+#include "config.h"
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -26,7 +28,8 @@ bool HelloWorld::init()
     {
         return false;
     }
-    
+  
+    /*
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
 
@@ -72,11 +75,48 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(pSprite, 0);
+    */
+    
+    
+    s = CCDirector::sharedDirector()->getWinSize();
+    
+    
+    //load resource
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("flappy.plist");
+    
+    //preload sound
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SoundTap);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SoundHit);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SoundPoint);
+    
+    
+    addBackground();
+    
     
     return true;
 }
 
+void HelloWorld::addBackground(){
+    CCSprite* bg = CCSprite::createWithSpriteFrameName("background.png");
+    bg->CCNode::setPosition(s.width/2, s.height/2);
+    this->addChild(bg);
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 void HelloWorld::menuCloseCallback(CCObject* pSender)
 {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8)
@@ -88,3 +128,4 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
 #endif
 #endif
 }
+*/
