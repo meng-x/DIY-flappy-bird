@@ -94,15 +94,25 @@ bool HelloWorld::init()
     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SoundHit);
     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SoundPoint);
     
+    resetGame();
+    
+    this->addComponent(new AddPipe());
+    
+    return true;
+}
+
+void HelloWorld::resetGame()
+{
+    this->removeAllChildrenWithCleanup(true);
+    
+    GameOver = false;
     
     addBackground();
     addLand();
     addBird();
     addLayerMoveLeft();
+    //addLabelScore();
     
-    this->addComponent(new AddPipe());
-    
-    return true;
 }
 
 void HelloWorld::addBackground(){
@@ -187,7 +197,11 @@ void HelloWorld::onExit(){
 }
 
 bool HelloWorld::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent){
-    bird->tap();
+    
+    if (GameOver) {
+        resetGame();
+    }else
+        bird->tap();
     
     return true;
 }

@@ -8,6 +8,7 @@
 
 #include "MoveLoop.h"
 #include "config.h"
+#include "HelloWorldScene.h"
 
 MoveLoop::MoveLoop(){
     setName("MoveLoop");
@@ -20,7 +21,13 @@ void MoveLoop::onEnter(){
 void MoveLoop::update(float delta){
 
     //stop the loop when gameover
-
+    CCNode* parent = (CCNode*)getOwner();
+    if (parent == NULL) return;
+    
+    if ( ((HelloWorld*)parent->getParent())->GameOver )
+    {
+        parent->stopAllActions();
+    }
 }
 
 

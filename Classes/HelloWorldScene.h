@@ -21,6 +21,10 @@ public:
     CREATE_FUNC(HelloWorld);
     
     void addPipe();
+    bool GameOver;
+    void updateUiScore();
+    
+    void playSound(std::string name);
     
 private:
     cocos2d::CCSprite* land;
@@ -38,6 +42,8 @@ private:
     void addLand();
     void addBird();
     void addLayerMoveLeft();
+    
+    void resetGame();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

@@ -8,6 +8,7 @@
 
 #include "Bird.h"
 #include "config.h"
+#include "HelloWorldScene.h"
 
 Bird::Bird(){
     initWithSpriteFrameName("bird1.png");
@@ -44,6 +45,7 @@ void Bird::tap(){
 
 void Bird::hit(){
     status = isHit;
+    ((HelloWorld*)getParent())->GameOver = true;
 }
 
 void Bird::updateScore(){
