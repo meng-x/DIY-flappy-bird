@@ -2,6 +2,7 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "Bird.h"
 
 class HelloWorld : public cocos2d::CCLayer
 {
@@ -20,9 +21,14 @@ public:
     CREATE_FUNC(HelloWorld);
     
 private:
+    cocos2d::CCSprite* land;
+    Bird* bird;
+    
     cocos2d::CCSize s;
+    
     void addBackground();
     void addLand();
+    void addBird();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

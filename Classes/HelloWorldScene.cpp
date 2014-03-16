@@ -93,6 +93,7 @@ bool HelloWorld::init()
     
     addBackground();
     addLand();
+    addBird();
     
     return true;
 }
@@ -104,7 +105,7 @@ void HelloWorld::addBackground(){
 }
 
 void HelloWorld::addLand(){
-    CCSprite* land = CCSprite::createWithSpriteFrameName("land.png");
+    land = CCSprite::createWithSpriteFrameName("land.png");
     
     land->setZOrder(2); //pipe is 1
     land->setAnchorPoint(ccp(0, 0));
@@ -116,7 +117,12 @@ void HelloWorld::addLand(){
     this->addChild(land);
 }
 
-
+void HelloWorld::addBird(){
+    bird = new Bird();
+    bird->setZOrder(1000); //to the very front
+    bird->CCNode::setPosition(s.width/2, s.height/2);
+    this->addChild(bird);
+}
 
 
 

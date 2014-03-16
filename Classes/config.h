@@ -14,6 +14,8 @@
 #define SoundPoint "sfx_point.mp3"
 
 #define kLandParts 15
-#define kMoveLeftDura 0.3
+#define kMoveLeftDura 0.2
+
+#define kFlyingDura 0.13
 
 #endif
