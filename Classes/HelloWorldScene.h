@@ -22,6 +22,7 @@ public:
 private:
     cocos2d::CCSize s;
     void addBackground();
+    void addLand();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

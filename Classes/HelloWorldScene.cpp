@@ -1,6 +1,7 @@
 #include "HelloWorldScene.h"
 #include "config.h"
 #include "SimpleAudioEngine.h"
+#include "MoveLoop.h"
 
 USING_NS_CC;
 
@@ -91,7 +92,7 @@ bool HelloWorld::init()
     
     
     addBackground();
-    
+    addLand();
     
     return true;
 }
@@ -100,6 +101,19 @@ void HelloWorld::addBackground(){
     CCSprite* bg = CCSprite::createWithSpriteFrameName("background.png");
     bg->CCNode::setPosition(s.width/2, s.height/2);
     this->addChild(bg);
+}
+
+void HelloWorld::addLand(){
+    CCSprite* land = CCSprite::createWithSpriteFrameName("land.png");
+    
+    land->setZOrder(2); //pipe is 1
+    land->setAnchorPoint(ccp(0, 0));
+    
+    land->CCNode::setPosition(-10, -4);
+    
+    land->addComponent(new MoveLoop());
+    
+    this->addChild(land);
 }
 
 

@@ -245,6 +245,7 @@
 		64DF740718D5834E00A0184F /* sfx_hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DF740218D5834E00A0184F /* sfx_hit.mp3 */; };
 		64DF740818D5834E00A0184F /* sfx_point.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DF740318D5834E00A0184F /* sfx_point.mp3 */; };
 		64DF740918D5834E00A0184F /* sfx_wing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DF740418D5834E00A0184F /* sfx_wing.mp3 */; };
+		64DF740F18D588CB00A0184F /* MoveLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DF740D18D588CB00A0184F /* MoveLoop.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -769,6 +770,8 @@
 		64DF740318D5834E00A0184F /* sfx_point.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_point.mp3; sourceTree = "<group>"; };
 		64DF740418D5834E00A0184F /* sfx_wing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_wing.mp3; sourceTree = "<group>"; };
 		64DF740B18D5853F00A0184F /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../Classes/config.h; sourceTree = "<group>"; };
+		64DF740D18D588CB00A0184F /* MoveLoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoveLoop.cpp; path = ../Classes/MoveLoop.cpp; sourceTree = "<group>"; };
+		64DF740E18D588CB00A0184F /* MoveLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoveLoop.h; path = ../Classes/MoveLoop.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -1302,6 +1305,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				64DF740C18D5889D00A0184F /* Components */,
 				64DF740A18D5850100A0184F /* Utils */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
@@ -1907,6 +1911,15 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		64DF740C18D5889D00A0184F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				64DF740D18D588CB00A0184F /* MoveLoop.cpp */,
+				64DF740E18D588CB00A0184F /* MoveLoop.h */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -2071,6 +2084,7 @@
 				15A3D9231682F7D5002FB0C5 /* b2Joint.cpp in Sources */,
 				15A3D9241682F7D5002FB0C5 /* b2MouseJoint.cpp in Sources */,
 				15A3D9251682F7D5002FB0C5 /* b2PrismaticJoint.cpp in Sources */,
+				64DF740F18D588CB00A0184F /* MoveLoop.cpp in Sources */,
 				15A3D9261682F7D5002FB0C5 /* b2PulleyJoint.cpp in Sources */,
 				15A3D9271682F7D5002FB0C5 /* b2RevoluteJoint.cpp in Sources */,
 				15A3D9281682F7D5002FB0C5 /* b2RopeJoint.cpp in Sources */,

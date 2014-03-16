@@ -13,4 +13,7 @@
 #define SoundHit "sfx_hit.mp3"
 #define SoundPoint "sfx_point.mp3"
 
+#define kLandParts 15
+#define kMoveLeftDura 0.3
+
 #endif
