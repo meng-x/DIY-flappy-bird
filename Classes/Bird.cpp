@@ -43,9 +43,9 @@ void Bird::tap(){
 }
 
 void Bird::hit(){
-
+    status = isHit;
 }
 
 void Bird::updateScore(){
-
+    score ++;
 }

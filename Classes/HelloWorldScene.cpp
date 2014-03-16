@@ -5,6 +5,7 @@
 #include "Flying.h"
 #include "MoveLeft.h"
 #include "AddPipe.h"
+#include "Collision.h"
 
 USING_NS_CC;
 
@@ -143,7 +144,7 @@ void HelloWorld::addLayerMoveLeft(){
 void HelloWorld::addPipe(){
     int r = rand();
     r = r%5;
-    float dy = r * 10;
+    float dy = r * 15;
     
     r = rand();
     r = r%2;
@@ -164,6 +165,9 @@ void HelloWorld::addPipe(){
     // set priority
     pipe1->setZOrder(land->getZOrder()-1);
     pipe2->setZOrder(land->getZOrder()-1);
+    
+    pipe1->addComponent(new Collision(bird, true));
+    pipe2->addComponent(new Collision(bird, false));
     
     layerMoveLeft->CCNode::addChild(pipe1);
     layerMoveLeft->CCNode::addChild(pipe2);

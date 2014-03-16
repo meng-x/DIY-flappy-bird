@@ -79,7 +79,18 @@ float Flying::getDuraDown(cocos2d::CCPoint up, cocos2d::CCPoint down){
 }
 
 void Flying::actionHit(){
-
+    CCPoint upPos = parent->getPosition();
+    parent->stopAllActions();
+    
+    CCPoint downPos = ccp(upPos.x, kLandHeight);
+    float duraDown = getDuraDown(upPos, downPos) * 1/2; //dam dau xuong chet rot nhanh hon gap doi...
+    
+    CCMoveTo* movedown = CCMoveTo::create(duraDown, downPos);
+    CCRotateTo* facedown = CCRotateTo::create(duraDown, 90);
+    CCSpawn* fall = CCSpawn::create(facedown, CCEaseSineIn::create(movedown), NULL); //rot xuong nhanh dan...
+    
+    curAction = fall;
+    parent->runAction(fall);
 }
 
 void Flying::stopAction(){
