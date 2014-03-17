@@ -197,6 +197,11 @@ void HelloWorld::updateUiScore(){
     lScore->setString(strScore->getCString());
 }
 
+
+void HelloWorld::playSound(std::string name){
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(name.c_str());
+}
+
 /////------------------- event handlers ----------
 
 void HelloWorld::onEnter(){

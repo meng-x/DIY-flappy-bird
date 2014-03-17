@@ -41,14 +41,17 @@ CCRepeatForever* Bird::flying(){
 
 void Bird::tap(){
     status = isTap;
+    ((HelloWorld*)getParent())->playSound(SoundTap);
 }
 
 void Bird::hit(){
     status = isHit;
     ((HelloWorld*)getParent())->GameOver = true;
+    ((HelloWorld*)getParent())->playSound(SoundHit);
 }
 
 void Bird::updateScore(){
     score ++;
     ((HelloWorld*)getParent())->updateUiScore();
+    ((HelloWorld*)getParent())->playSound(SoundPoint);
 }
