@@ -41,7 +41,7 @@ void Flying::actionTap(){
     ///
     ///
     //CCSize win = CCDirector::sharedDirector()->getWinSize();
-    //TODO
+    //TODO : make the fall looks better
     ///
     ///
 
@@ -83,11 +83,11 @@ void Flying::actionHit(){
     parent->stopAllActions();
     
     CCPoint downPos = ccp(upPos.x, kLandHeight);
-    float duraDown = getDuraDown(upPos, downPos) * 1/2; //dam dau xuong chet rot nhanh hon gap doi...
+    float duraDown = getDuraDown(upPos, downPos) * 1/2; 
     
     CCMoveTo* movedown = CCMoveTo::create(duraDown, downPos);
     CCRotateTo* facedown = CCRotateTo::create(duraDown, 90);
-    CCSpawn* fall = CCSpawn::create(facedown, CCEaseSineIn::create(movedown), NULL); //rot xuong nhanh dan...
+    CCSpawn* fall = CCSpawn::create(facedown, CCEaseSineIn::create(movedown), NULL);
     
     curAction = fall;
     parent->runAction(fall);

@@ -25,9 +25,10 @@ void Collision::update(float delta){
     if (bird->status == isDie) {
         return;
     }
-    
+    printf("getWorldPosition...%f\n", getWorldPosition().x);
     if (getScore) {
         if (getWorldPosition().x <= bird->getPosition().x) {
+
             getScore = false;
             bird->updateScore();
         }
@@ -48,6 +49,10 @@ bool Collision::isCollision()
     
     float d = 6; 
     
+    //the collision area is just like the symbol "#"
+    
+    //first get the # of those two areas, pipe and bird.
+    
     float maxx1 = ppipe.x + spipe.width/2 - d;
     float minx1 = ppipe.x - spipe.width/2 + d;
     float maxy1 = ppipe.y + spipe.height/2 - d;
@@ -58,10 +63,14 @@ bool Collision::isCollision()
     float maxy2 = pbird.y + sbird.height/2 - d;
     float miny2 = pbird.y - sbird.height/2 + d;
     
-    return !(maxx1 < minx2 ||
+    //so here is the situation that the bird has no possibility to collision with the pipe
+    //just need to return the opposite of this.
+    return !(
+             maxx1 < minx2 ||
              maxx2 < minx1 ||
              maxy1 < miny2 ||
-             maxy2 < miny1);
+             maxy2 < miny1
+             );
     
 }
 
@@ -69,3 +78,16 @@ CCPoint Collision::getWorldPosition()
 {
     return ((CCParallaxNode*)parent->getParent())->convertToWorldSpace(parent->getPosition());
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

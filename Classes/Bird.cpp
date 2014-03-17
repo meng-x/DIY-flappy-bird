@@ -50,4 +50,5 @@ void Bird::hit(){
 
 void Bird::updateScore(){
     score ++;
+    ((HelloWorld*)getParent())->updateUiScore();
 }

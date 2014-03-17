@@ -22,15 +22,17 @@ public:
     
     void addPipe();
     bool GameOver;
-    void updateUiScore();
     
+    void resetGame();
+    
+    void updateUiScore();
     void playSound(std::string name);
     
 private:
     cocos2d::CCSprite* land;
     Bird* bird;
     CCParallaxNode* layerMoveLeft;
-    
+    CCLabelTTF* lScore;
     cocos2d::CCSize s;
     
     
@@ -43,7 +45,7 @@ private:
     void addBird();
     void addLayerMoveLeft();
     
-    void resetGame();
+    void addLabelScore();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

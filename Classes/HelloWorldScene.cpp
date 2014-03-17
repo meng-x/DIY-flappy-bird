@@ -111,7 +111,7 @@ void HelloWorld::resetGame()
     addLand();
     addBird();
     addLayerMoveLeft();
-    //addLabelScore();
+    addLabelScore();
     
 }
 
@@ -183,6 +183,19 @@ void HelloWorld::addPipe(){
     layerMoveLeft->CCNode::addChild(pipe2);
 }
 
+void HelloWorld::addLabelScore(){
+    CCString* strScore = CCString::createWithFormat("%d", bird->score);
+    lScore = CCLabelTTF::create(strScore->getCString(), "", 30);
+    lScore->setZOrder(getChildrenCount());
+    lScore->CCNode::setPosition(s.width/2, s.height - 40);
+    
+    this->addChild(lScore);
+}
+
+void HelloWorld::updateUiScore(){
+    CCString* strScore = CCString::createWithFormat("%d", bird->score);
+    lScore->setString(strScore->getCString());
+}
 
 /////------------------- event handlers ----------
 
