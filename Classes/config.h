@@ -20,7 +20,7 @@
 
 //---bird---
 
-#define kJumpHeight 40
+#define kJumpHeight 45
 #define kJumpDura 0.3
 
 

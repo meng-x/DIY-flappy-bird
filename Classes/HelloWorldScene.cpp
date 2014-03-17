@@ -6,6 +6,7 @@
 #include "MoveLeft.h"
 #include "AddPipe.h"
 #include "Collision.h"
+#include "TouchGround.h"
 
 USING_NS_CC;
 
@@ -97,7 +98,7 @@ bool HelloWorld::init()
     resetGame();
     
     this->addComponent(new AddPipe());
-    
+    GameOver = true;
     return true;
 }
 
@@ -108,8 +109,8 @@ void HelloWorld::resetGame()
     GameOver = false;
     
     addBackground();
-    addLand();
     addBird();
+    addLand();
     addLayerMoveLeft();
     addLabelScore();
     
@@ -130,6 +131,7 @@ void HelloWorld::addLand(){
     land->CCNode::setPosition(-10, -4);
     
     land->addComponent(new MoveLoop());
+    land->addComponent(new TouchGround(bird));
     
     this->addChild(land);
 }
@@ -218,6 +220,7 @@ bool HelloWorld::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent
     
     if (GameOver) {
         resetGame();
+        bird->tap();
     }else
         bird->tap();
     

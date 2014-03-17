@@ -28,13 +28,20 @@ void Flying::update(float delta){
 }
 
 void Flying::actionTap(){
+    CCSize win = CCDirector::sharedDirector()->getWinSize();
+    if (parent->getPosition().y > win.height-20) {
+        return;
+    }
+    
+    
     stopAction();
     
     CCPoint uppos = parent->getPosition();
     uppos.y += kJumpHeight;  //JUMP!!
     
     //if fall, fall to this position
-    CCPoint downpos = ccp(uppos.x, kLandHeight);
+    
+    CCPoint downpos = ccp(uppos.x, uppos.y - win.height); //kLandHeight);
     
     float duraDown = getDuraDown(uppos, downpos); //time of falling down
     
@@ -68,6 +75,11 @@ void Flying::actionTap(){
 
 float Flying::getDuraDown(cocos2d::CCPoint up, cocos2d::CCPoint down){
     float dy = up.y - down.y;
+    
+    CCSize win = CCDirector::sharedDirector()->getWinSize();
+    dy = win.height/1.5;
+    
+    
     float dura;
     
     if (dy < kJumpHeight) {
@@ -83,7 +95,7 @@ void Flying::actionHit(){
     parent->stopAllActions();
     
     CCPoint downPos = ccp(upPos.x, kLandHeight);
-    float duraDown = getDuraDown(upPos, downPos) * 1/2; 
+    float duraDown = getDuraDown(upPos, downPos) * 1/2;
     
     CCMoveTo* movedown = CCMoveTo::create(duraDown, downPos);
     CCRotateTo* facedown = CCRotateTo::create(duraDown, 90);

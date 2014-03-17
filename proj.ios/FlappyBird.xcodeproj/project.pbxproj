@@ -251,6 +251,7 @@
 		64EE360C18D5AF13000CD5D3 /* MoveLeft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64EE360A18D5AF13000CD5D3 /* MoveLeft.cpp */; };
 		64EE360F18D5B7D6000CD5D3 /* AddPipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64EE360D18D5B7D6000CD5D3 /* AddPipe.cpp */; };
 		64EE361318D5CE53000CD5D3 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64EE361118D5CE53000CD5D3 /* Collision.cpp */; };
+		64EE361718D74B8C000CD5D3 /* TouchGround.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64EE361518D74B8C000CD5D3 /* TouchGround.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -787,6 +788,8 @@
 		64EE360E18D5B7D6000CD5D3 /* AddPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddPipe.h; path = ../Classes/AddPipe.h; sourceTree = "<group>"; };
 		64EE361118D5CE53000CD5D3 /* Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Collision.cpp; path = ../Classes/Collision.cpp; sourceTree = "<group>"; };
 		64EE361218D5CE53000CD5D3 /* Collision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Collision.h; path = ../Classes/Collision.h; sourceTree = "<group>"; };
+		64EE361518D74B8C000CD5D3 /* TouchGround.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TouchGround.cpp; path = ../Classes/TouchGround.cpp; sourceTree = "<group>"; };
+		64EE361618D74B8C000CD5D3 /* TouchGround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchGround.h; path = ../Classes/TouchGround.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -1940,6 +1943,8 @@
 				64EE360E18D5B7D6000CD5D3 /* AddPipe.h */,
 				64EE361118D5CE53000CD5D3 /* Collision.cpp */,
 				64EE361218D5CE53000CD5D3 /* Collision.h */,
+				64EE361518D74B8C000CD5D3 /* TouchGround.cpp */,
+				64EE361618D74B8C000CD5D3 /* TouchGround.h */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -2247,6 +2252,7 @@
 				1A8F3B7F175E05DA00049216 /* Skin.cpp in Sources */,
 				298B29BE18D0668400C1920F /* LabelBMFontReader.cpp in Sources */,
 				1A8F3B80175E05DA00049216 /* Slot.cpp in Sources */,
+				64EE361718D74B8C000CD5D3 /* TouchGround.cpp in Sources */,
 				1A8F3B81175E05DA00049216 /* SlotData.cpp in Sources */,
 				1A8F3B82175E05DA00049216 /* spine-cocos2dx.cpp in Sources */,
 				298B29C418D0668400C1920F /* ScrollViewReader.cpp in Sources */,

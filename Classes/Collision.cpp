@@ -25,7 +25,7 @@ void Collision::update(float delta){
     if (bird->status == isDie) {
         return;
     }
-    printf("getWorldPosition...%f\n", getWorldPosition().x);
+    //printf("getWorldPosition...%f\n", getWorldPosition().x);
     if (getScore) {
         if (getWorldPosition().x <= bird->getPosition().x) {
 
